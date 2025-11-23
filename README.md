@@ -17,8 +17,11 @@ The Cool Appliance Company is a premium home appliance retailer specializing in 
 
 - **Responsive Design**: Optimized for desktop, tablet, and mobile devices
 - **Modern UI/UX**: Clean, professional design with smooth animations
-- **Product Catalog**: Comprehensive showcase of premium appliances
+- **Product Catalog**: Comprehensive showcase of premium appliances with detail pages
+- **Hero Carousel**: Auto-sliding product showcase on homepage
+- **Newsletter Modal**: Email subscription functionality
 - **Contact Integration**: Multiple contact methods (phone, email, WhatsApp)
+- **Interactive Forms**: Contact form with EmailJS integration
 - **SEO Optimized**: Meta tags, structured data, and performance optimized
 - **Fast Loading**: Built with Vite for optimal performance
 
@@ -53,6 +56,11 @@ The Cool Appliance Company is a premium home appliance retailer specializing in 
 4. **Open your browser**
    Navigate to `http://localhost:5173` to view the website.
 
+5. **Run linting** (optional)
+   ```bash
+   npm run lint
+   ```
+
 ## 🏗️ Build for Production
 
 1. **Build the project**
@@ -74,31 +82,42 @@ The Cool Appliance Company is a premium home appliance retailer specializing in 
 cool-appliance-demo/
 ├── public/
 │   ├── images/          # Product and company images
+│   │   ├── hero/        # Hero section images
+│   │   ├── logo/        # Company logo and banners
+│   │   └── products/    # Product images
 │   ├── favicon.svg      # Custom favicon
 │   └── vite.svg         # Default Vite logo
 ├── src/
 │   ├── components/      # Reusable React components
 │   │   ├── common/      # Shared components
+│   │   │   └── NewsletterModal.jsx
+│   │   ├── BusinessHeader.jsx
 │   │   ├── ContactForm.jsx
 │   │   ├── Footer.jsx
 │   │   ├── Header.jsx
-│   │   └── ProductCard.jsx
+│   │   ├── HeroCarousel.jsx
+│   │   ├── ProductCard.jsx
+│   │   └── PromotionalBanner.jsx
 │   ├── data/           # Static data and content
 │   │   └── products.js
+│   ├── hooks/          # Custom React hooks
 │   ├── pages/          # Page components
 │   │   ├── About.jsx
 │   │   ├── Contact.jsx
 │   │   ├── Home.jsx
-│   │   ├── Products.jsx
-│   │   └── Services.jsx
+│   │   ├── ProductDetail.jsx
+│   │   └── Products.jsx
 │   ├── styles/         # Additional stylesheets
 │   ├── utils/          # Utility functions
-│   ├── App.jsx         # Main app component
+│   ├── App.jsx         # Main app component with routing
+│   ├── App.css         # App-specific styles
 │   ├── main.jsx        # Application entry point
 │   └── index.css       # Global styles and Tailwind imports
 ├── index.html          # HTML template
 ├── package.json        # Dependencies and scripts
 ├── vite.config.js      # Vite configuration
+├── postcss.config.js   # PostCSS configuration
+├── eslint.config.js    # ESLint configuration
 └── README.md          # This file
 ```
 
@@ -132,18 +151,19 @@ cool-appliance-demo/
 - Category filtering
 - Search functionality
 - Product cards with details
+- Individual product detail pages
+
+### Product Detail Page
+- Detailed product information
+- Product specifications
+- Image gallery
+- Related products
 
 ### About Page
 - Company story and mission
 - Why choose us section
 - Showroom information
 - Team and values
-
-### Services Page
-- Professional installation
-- Warranty and protection
-- Maintenance and repair
-- Customer support process
 
 ### Contact Page
 - Contact information
@@ -188,7 +208,7 @@ Upload the contents of the `dist/` folder to any static hosting service.
 
 ## 📄 License
 
-This project is proprietary to The Cool Appliance Company (LLC). All rights reserved.
+This project is a concept/demo project. All rights reserved.
 
 ## 📞 Contact
 
