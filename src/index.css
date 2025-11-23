@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary-blue: #2E5BBA;
+  --color-primary-white: #FFFFFF;
+  --color-primary-black: #000000;
+  
+  --color-light-blue: #4A7BC8;
+  --color-dark-blue: #1A4B8C;
+  --color-light-gray: #F5F5F5;
+  --color-medium-gray: #CCCCCC;
+  --color-dark-gray: #333333;
+  --color-accent-gray: #666666;
+  
+  --color-success: #28A745;
+  --color-warning: #FFC107;
+  --color-error: #DC3545;
+  --color-info: #17A2B8;
+
+  --font-family-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+
+:root {
+  /* Primary Colors */
+  --primary-blue: #2E5BBA;
+  --primary-white: #FFFFFF;
+  --primary-black: #000000;
+  
+  /* Secondary/Supporting Colors */
+  --light-blue: #4A7BC8;
+  --dark-blue: #1A4B8C;
+  --light-gray: #F5F5F5;
+  --medium-gray: #CCCCCC;
+  --dark-gray: #333333;
+  --accent-gray: #666666;
+  
+  /* Semantic Colors */
+  --success: #28A745;
+  --warning: #FFC107;
+  --error: #DC3545;
+  --info: #17A2B8;
+}
+
+/* Base Heading Styles */
+h1 {
+  font-weight: 700;
+  font-size: 2.25rem; /* 36px - text-4xl */
+  color: var(--primary-black);
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1.875rem; /* 30px - text-3xl */
+  color: var(--primary-black);
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.5rem; /* 24px - text-2xl */
+  color: var(--primary-black);
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 1.25rem; /* 20px - text-xl */
+  color: var(--primary-black);
+}
+
+h5 {
+  font-weight: 500;
+  font-size: 1.125rem; /* 18px - text-lg */
+  color: var(--primary-black);
+}
+
+h6 {
+  font-weight: 500;
+  font-size: 1rem; /* 16px - text-base */
+  color: var(--primary-black);
+}
+
+/* Small-screen heading scale downs */
+@media (max-width: 640px) {
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.375rem; }
+  h3 { font-size: 1.25rem; }
+  h4 { font-size: 1.125rem; }
+  h5 { font-size: 1rem; }
+  h6 { font-size: 0.9375rem; }
+}
